@@ -1,0 +1,10 @@
+The CSS rule `:nth-child(n)` might not work as expected when dealing with dynamically added or removed elements.  The selector is evaluated only once when the page is initially rendered, and it won't reflect changes to the DOM structure after that.  This can lead to incorrect styling if the number of elements changes.
+
+```css
+/* Example: Styling every other list item */
+li:nth-child(even) {
+  background-color: lightgray;
+}
+```
+
+If you add or remove list items after the page loads, the styling based on `:nth-child` won't update automatically.
